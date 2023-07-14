@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
+console.log(fas);
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

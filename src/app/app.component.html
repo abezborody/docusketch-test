@@ -1,6 +1,12 @@
 <div class="container">
   <div class="icon-container">
-    <fa-icon [icon]="icon" size="6x"></fa-icon>
+    {{ !buttonIsActive ? "loading..." : "" }}
+    <fa-icon
+      class="icon"
+      *ngIf="buttonIsActive === true"
+      [icon]="icon"
+      size="10x"
+    ></fa-icon>
   </div>
   <button class="button" (click)="shuffle()" [disabled]="!buttonIsActive">
     {{ buttonIsActive ? "shuffle" : "" }}
@@ -11,3 +17,6 @@
     ></fa-icon>
   </button>
 </div>
+<footer class="footer">
+  Made by <a href="https://github.com/abezborody">Anton Bezborody</a>
+</footer>

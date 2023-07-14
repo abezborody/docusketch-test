@@ -14,3 +14,12 @@
 body {
   background-color: #333;
 }
+
+a {
+  color: #3d6aff;
+  transition: filter 100ms ease-out;
+}
+a:hover {
+  color: #567dfd;
+  filter: drop-shadow(0px 0px 0.75rem #3d6aff);
+}
