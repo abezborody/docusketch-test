@@ -11,7 +11,7 @@ export class AppComponent {
   index: number = Math.floor(Math.random() * Object.keys(fas).length);
   icon = Object.values(fas)[this.index];
   buttonIsActive: boolean = true;
-
+  loader = fas['faSpinner'];
   shuffle() {
     this.buttonIsActive = false;
     setTimeout(() => {

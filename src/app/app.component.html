@@ -2,5 +2,12 @@
   <div class="icon-container">
     <fa-icon [icon]="icon" size="6x"></fa-icon>
   </div>
-  <button class="button" (click)="shuffle()">shuffle</button>
+  <button class="button" (click)="shuffle()" [disabled]="!buttonIsActive">
+    {{ buttonIsActive ? "shuffle" : "" }}
+    <fa-icon
+      *ngIf="buttonIsActive === false"
+      [icon]="loader"
+      animation="spin"
+    ></fa-icon>
+  </button>
 </div>

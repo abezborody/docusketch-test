@@ -30,6 +30,7 @@
   border-radius: 4px;
   cursor: pointer;
   transition: all 100ms ease-out;
+  width: 88px;
 }
 
 .button:hover {
