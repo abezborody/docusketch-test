@@ -1,0 +1,36 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.icon-container {
+  aspect-ratio: 1;
+  min-height: 352px;
+  background-color: white;
+  border: 1px solid #666;
+  border-radius: 32px;
+}
+
+.button {
+  color: black;
+  background-color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 100ms ease-out;
+}
+
+.button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+.button:active {
+  background-color: #e2e2e2;
+  transform: translateY(1px);
+}
