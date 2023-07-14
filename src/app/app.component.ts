@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +8,16 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'docusketch-test';
-  faCoffee = faCoffee;
+  index: number = Math.floor(Math.random() * Object.keys(fas).length);
+  icon = Object.values(fas)[this.index];
+  buttonIsActive: boolean = true;
+
+  shuffle() {
+    this.buttonIsActive = false;
+    setTimeout(() => {
+      this.index = Math.floor(Math.random() * Object.keys(fas).length);
+      this.icon = Object.values(fas)[this.index];
+      this.buttonIsActive = true;
+    }, 3000);
+  }
 }
