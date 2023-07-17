@@ -15,11 +15,13 @@ export class AppComponent {
   buttonIsActive: boolean = true;
   loader = fas['faSpinner'];
   shuffle() {
-    this.buttonIsActive = false;
+    // If we won't stack promises, we can just disable button and wait until timeout will change the icon.
+    // this.buttonIsActive = false;
     setTimeout(() => {
       this.index = Math.floor(Math.random() * Object.keys(fas).length);
       this.icon = Object.values(fas)[this.index];
-      this.buttonIsActive = true;
+      // After changing icon set button active back.
+      // this.buttonIsActive = true;
     }, 3000);
   }
 }
