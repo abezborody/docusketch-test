@@ -18,5 +18,12 @@
   </button>
 </div>
 <footer class="footer">
-  Made by <a href="https://github.com/abezborody">Anton Bezborody</a>
+  <button
+    [ngClass]="buttonIsDisableable ? 'toggled' : ''"
+    class="button"
+    (click)="disableButton()"
+  >
+    disableble
+  </button>
+  <div>Made by <a href="https://github.com/abezborody">Anton Bezborody</a></div>
 </footer>
